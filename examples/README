@@ -1,0 +1,84 @@
+######################################################################
+#
+# $Id: README,v 1.17 2004/09/13 01:46:59 awd Exp $
+#
+######################################################################
+
+You have found perhaps the world's only Open Source stand-alone
+distributed server shell command / batch system.
+
+Websites
+--------
+Website:                    http://sourceforge.net/projects/distribulator/
+Pydoc Documentation:        http://distribulator.turing.com:8080/
+
+Email Mailing Lists
+-------------------
+Announcement Email List Subscription:
+	distribulator-announce-subscribe@turing.com
+User Discussion / Support List Subscription:
+	distribulator-users-subscribe@turing.com
+User Discussion / Support Main List:
+	distribulator-users@turing.com
+
+What Is It?
+-----------
+The Distribulator concept arised after working with an environment
+consisting of over 750 servers, in a company where there aren't nearly
+that many employees total -- much less just to maintain servers!
+
+The Distribulator is a longer-term project whose goal is to provide
+cluster management functionality to "the rest of us" not running
+custom clustered OS-level software.  It aims to solve the widest range
+of problems with the least amount of code / complexity.
+
+Currently, the Distribulator has three modes:
+
+* Batch: A batch mode that's handy in a number of situations ranging
+  from repeatable tasks to complete hand-off of logic from one group
+  of people to another.
+
+* Console: A console interface designed to "wrap" around SSH,
+  but will also allow local commands to be run.  The idea here is to provide
+  people who have to do command-level maintenance / "fire fights" in a
+  production environment with the simplest common toolset available.
+  (Has anyone seen better?  If so, please let me know!)
+
+* List: A list mode suitable to retrieving set lists of servers or server groups,
+  with the goal of easy for loop iteration from shell scripts, Perl code, etc.
+
+The software also comes with a some "training wheel"-style features:
+
+* Built-in "environment blinders" such that by definition one cannot corrupt
+  Environment A by attempting to perform operations on Environment B.
+  Hopefully this can avoid problems that sound like this -- "Oh crap!  That was production?"
+
+* Built-in, but overridable "Are you sure?" prompts are automatically inserted
+  into all console-mode commands.
+
+What Will It Do?
+----------------
+Many things.  Please see the "Changelog" file located in this directory.
+
+How do I install it?
+--------------------
+Please see the "INSTALL" file located in this directory.
+
+How stable is it?
+-----------------
+By the time releases are posted on SourceForge, they've typically been in multiple test environments
+for roughly 2 weeks performing real-world tasks.  As they say, however, Your Milage May Vary.
+
+What are the known bugs?
+------------------------
+Please see the Sourceforge project site, click on the "Bugs" link.
+
+Where can I read more extensive documentation?
+----------------------------------------------
+Sorry, but for the moment the most extensive documentation can be found
+by running "distribulator.py --help" and using the "help" command
+once the console mode has started properly.
+
+Who Is Working On It?
+---------------------
+Please see the accompanying CREDITS file.

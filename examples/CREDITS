@@ -1,0 +1,50 @@
+######################################################################
+#
+# $Id: CREDITS,v 1.14 2006/02/14 22:31:31 awd Exp $
+#
+######################################################################
+
+1. Direct Contributors (code, design, doc)
+
+Adam "Tweek" Dace / Chief Python Hacker (adam@turing.com, adace@orbitz.com)
+Brian Dols / Python Hacker (regex integration)
+Karl D'adamo / Python Hacker (general coding, threading implementation)
+
+2. Indirect Contributors (Orbitz management support, ideas/suggestions, related software)
+
+Name			| Contribution
+------------------------+----------------------------------
+Ruben Areyzaga		| Suggestions and Usage
+Warren Breitenbach	| Management Support, Suggestions & Usage
+Justin Grudzien		| Salt Monger & General Nay-Sayer
+Michael Henderson       | Suggestions
+Chris Hjelm		| Management Support
+Ryan Huber		| Suggestions and Extension(?)
+Russ Kieckhafer		| Management Support
+Cal Lott		| Management Support, Suggestions & Usage
+Charles Marshall	| Suggestions and Usage
+David Masters		| Suggestions and Usage
+Eric Mathiasen		| Suggestions and Usage
+Rob Malchow		| Suggestions and Usage
+Laef Olson              | Management Support
+Jason Rohwedder		| Suggestions
+Ben Schmitz		| Suggestions and Usage
+Aras Saulys             | Obscure Bug Finding Skillz
+Dan Shannon		| Suggestions and Usage
+Steve Turner		| Management Support
+Andrew Uhm		| Suggestions and Usage
+------------------------+----------------------------------
+
+Orbitz NOC Team Past & Present:  Uhh...everything?
+
+P.S. Please bug Adam if you should be on this list but are not...
+
+3. Dedication
+
+This software is dedicated to those individuals behind Internet sites everywhere --
+working frantically behind-the-scenes to implement, test, and operate their site
+in a world where a "store" that's only open from 9:00 AM to 5:00 PM, in any time zone,
+is a "store" that's out of business.
+
+I'd like to especially thank those in the Technology department of Orbitz, Inc.
+without whose patience and support this project simply would not be possible.

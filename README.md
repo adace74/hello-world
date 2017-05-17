@@ -16,15 +16,15 @@ An attempt to create a lightweight Java library for receiving and processing con
 
 ## Websites
 Website:                    https://github.com/colonelforbin74/console
+
 JavaDoc Documentation:      N/A
 
 ## Group Discussion (Google Groups?)
-Announcement Email List Subscription:
-        N/A
-User Discussion / Support List Subscription:
-        N/A
-User Discussion / Support Main List:
-        N/A
+Announcement Email List Subscription: N/A
+
+User Discussion / Support List Subscription: N/A
+
+User Discussion / Support Main List: N/A
 
 ## What Is It?
 Fill me in later.

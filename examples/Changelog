@@ -1,0 +1,329 @@
+######################################################################
+#
+# $Id: Changelog,v 1.120 2006/02/14 22:32:56 awd Exp $
+#
+######################################################################
+
+Legend For Changes Below:
+"?" Indicates a change that is being considered.
+"-" Indicates a change that hasn't even been started on.
+"+" Indicates a change that is currently being developed.
+"*" Indicates a change that is at least 80%(if not 100%) complete.
+
+Change List For v0.3 (Language: Perl / Status: Shipped)
+-------------------------------------------------------
+* Some semblance of a shell, include a useful prompt.
+  Now includes 'cat', 'cd', and 'ls' for local server browsing.
+* Ability to load in text-based lists of servers, representing
+  server sets.
+* Ability to load in different remote usernames for different server sets
+  from a text file.
+  (i.e. apache@web01, tomcat@app01)
+* Ability to work with -one- environment of servers at a time,
+  specified at startup via --env=my_environment.
+  The idea here is not allow users to mix devel, testing, and production worlds.
+* Attempts to connect to all servers port 22, -before- running ssh.
+  This health-check prevents "session hang" that can occur by running
+  ssh alone.
+* Single remote server command execution.
+* Multiple set-based remote server command execution.
+* Pattern-based group and server name matching for the lazy sysadmin
+  in all of us.
+
+Change List For v0.4-v0.45 (Language: Perl / Status: Shipped)
+-------------------------------------------------------------
+* Addition of the "login" command.  Basically allows the user to specify
+  a server to login to without having to exit the distribulator.
+* Addition of --noping for environments where either a ServerPing is
+  undesirable or the installed version of Net::Ping is out-of-date.
+* Addition of the "all" server group.  This will allow one to run any command
+  across every group in the started-up environment.
+* Addition of the ability to read in a text-file list of common Unix commands.
+* Addition of the ability to distinguish those commands as external and
+  simply pass them through to the underlying shell via the system() call.
+
+Change List For v0.47 (Language: Perl / Status: Shipped)
+--------------------------------------------------------
+* Modularized codebase.  Still not all that generic, but at least
+  broken out by functionality.  There's still way too many
+  inter-dependancies, but it's at least more manageable.
+* Various fixes, including that of the Net::Ping code,
+  no CPAN module addon required.  Removed --noping as the underlying
+  assumption behind it is not valid.
+* Term::ReadLine::GNU & GNU libreadline are now required for this
+  software to perform correctly(or even run it seems).
+* Lots of GNU libreadline functionality: history load/save,
+  tab-completion of first word command, some CTRL-C / CTRL-D integration.
+* Crude attempts to fix problems relating to running distribulator,
+  then exiting and having one's term act very flakey.
+* Added ability to abort a command while executing on X servers.
+  (Hold down CTRL-C, or just hit it a number of times)
+* Improved testing process, thus improved stability.
+
+Change List For v0.48 (Language: Perl / Status: Shipped)
+--------------------------------------------------------
+* Fixed a silly bug where the command-line prompt wasn't being updated with
+  the current server group.
+* Added a -t flag to the run command.  This will allow one to specify
+  whether a remote tty is required for a given command.  This has caused
+  much pain within my work environment lately.  Use with caution, some
+  programs/scripts require -t (i.e. vi) and some will utterly break on
+  Linux if given -t (i.e. some custom startup scripts).
+* Fixed the included wrapper script such that it stores the user's
+  pwd on startup, then passes it along to the distribulator such that
+  the module directory magic going is transparent.
+* Fixed code to ignore 'CVS' directories.
+
+Change List For v0.5 (Language: Python / Bloat Factor: 1787 lines / Status: Shipped)
+------------------------------------------------------------------------------------
+* First 100% Python release.  Enjoying the benefits of a more
+  natively object-oriented language than Perl.
+* All previous Perl features implemeneted, some better than before.
+* Auditing implemented.
+* Batch mode implemented.
+* XML config implemented.
+* Single local server file to single group server file copy.
+(i.e. scp awd@localhost:/tmp/blah awd@app:/some/other/path)
+
+Change List For v0.51 (Language: Python / Bloat Factor: 1787 lines / Status: Shipped)
+-------------------------------------------------------------------------------------
+* Lots of documentation updates,
+  aiming for the normal INSTALL/README paradigm.
+
+Change List For v0.52 (Language: Python / Bloat Factor: 1819 lines / Status: Shipped)
+-------------------------------------------------------------------------------------
+* Changed command "server-group" with no arguments to print
+  a server-group list similar to that at startup.
+* Fixed inaccuracies found in this Changelog.
+* SourceForge bug #744225 fixed.
+* SourceForge bug #744226 fixed.
+* SourceForge bug #749953 fixed.
+* SourceForge bug #749963 fixed.
+
+Change List For v0.53 (Language: Python / Bloat Factor: Unknown / Status: Skipped)
+----------------------------------------------------------------------------------
+* Minimal cosmetic fixes in how server-list and server-group
+  do output.
+
+Change List For v0.6.0 (Language: Python / Bloat Factor: 2503 lines / Status: Shipped)
+--------------------------------------------------------------------------------------
+* Goal: The ongoing goal of this release is to provide a "good enough"
+  featureset for real-world applications, and to implement a
+  feature freeze such that focus can be shifted to stability
+  and correctness issues.
+* Batch Mode: Addition of --quiet flag to indicate we don't want output when
+  run in batch mode.  The default now is to NOT be quiet.
+* Batch Mode: Addition of comment(#) and line(\) continuation compatability.
+  This will only allow comments to be on a single line, by themselves.
+* Batch Mode: Addition of --var1, --var2, and --var3, which enable very
+  simple string substitution such that batch files don't have to be
+  completely hard-coded.  Also added $env as a built-in variable.
+* Batch Mode: Addition of a quiet-mode-aware pretty header and footer.
+  Footer includes command count tracking and a very simple time statistics
+  summary.
+* Addition of the ability to run commands on a single server,
+  list of multiple servers, single server group,
+  as well as multiple server groups.
+* Addition of the ability to copy files(one-way for right now) from
+  a local server out to a single server, list of multiple servers,
+  single server group, as well as multiple server groups.
+* Addition of a valid XML DTD, such that one can use readily-available
+  XML validators to verify that config.xml has no syntax errors,
+  spelling mistakes(in tags), etc.  Verified example config.xml
+  actually validates via a standard XML validator.
+* Removed short version of option flags.  They've outlived their
+  usefullness and have become more effort than they're worth.
+* Documentation system-wide has been updated to reflect new features added.
+  Also started the process of standardizing comments within the sourcecode.
+* Lots of little bugs were found and fixed along the way.
+  For details see Sourceforge, there are simply too many to list here.
+* Small LICENSE fixes, also propogated other legalese.
+
+Change List For v0.6.1 (Language: Python / Bloat Factor: 2940 lines / Status: Shipped)
+--------------------------------------------------------------------------------------
+* Finally got around to parameterizing the application version info.
+* Added source-level documentation to the codebase(pydoc compatible).
+* Various clean-up across the codebase.
+* Addition of the ability to specify a config file via the --config
+  flag.
+* Addition of the ability to use the local username remotely,
+  when there are no "username" attributes found in config.xml.
+* SourceForge bug #776079 fixed.
+* SourceForge bug #787445 fixed.
+* SourceForge bug #776080 fixed.
+* SourceForge bug #774953 fixed.
+* Standardized version numbering.
+* Added a small script to automate release packaging.
+
+Change List For v0.6.2 (Language: Python / Bloat Factor: 2951 lines / Status: Shipped)
+--------------------------------------------------------------------------------------
+* SourecForge bug #805371 fixed.
+* SourceForge bug #815787 fixed.
+* SourceForge bug #815788 fixed.
+* SourceForge bug #815877 fixed.
+
+Change List For v0.6.3 (Language: Python / Bloat Factor: 3157 lines / Status: Shipped)
+--------------------------------------------------------------------------------------
+* SourceForge bug #845634 fixed.
+* SourecForge bug #853052 fixed.
+* Ability to simply echo any given set of hosts or server groups to STDOUT
+  in a space-delimited format acceptable to other languages(i.e. shell/Perl)
+  that is also easily passable to SSH.
+* Cleanup: Renaming instance variables with a naming convention less lame than
+  thisThing, thisOtherThing, etc.
+
+Change List For v0.7.0 (Language: Python / Bloat Factor: 3478 lines / Status: Shipped)
+--------------------------------------------------------------------------------------
+* Cleanup: Restructured and "split up" code such that it adheres to a more
+  OO way of thinking.  No real definition of dynamic versus static classes,
+  but at least there are less monolithic classfiles now.
+* Cleanup: Examined all source files, eliminated extraneous imports
+  where possible.
+* Cleanup: Updated pydoc-based documentation to reflect above changes.
+* Testing: Improved the existing manual test suite.
+* Batch Mode: Added $hostname as a built-in variable, referencing the local server hostname.
+
+Change List For v0.7.1 (Language: Python / Bloat Factor: 3646 lines / Status: Shipped)
+--------------------------------------------------------------------------------------
+* Ability to "ping" servers via internal TCP check logic.
+  Options include TCP port, timeout in secs, and a banner string contains "foo" check.
+  NOTE: This appears to have sped up overall speed significantly.  Nice!
+* Rename "server-group" command to "set server-group"
+  and "server-list" command to "list server-group".
+* Ability to use a new run command keyword: "single".
+  This will copy or run a command to a single server within a group,
+  skipping failed servers as necessary.
+* Cleanup: Added a generic error message to the XMLConfigParser,
+  should avoid some raw stack traces on missing XML tags.
+
+Change List For v0.7.2 (Language: Python / Bloat Factor: 3655 lines / Status: Shipped)
+--------------------------------------------------------------------------------------
+* Update all code to be functional with Python v2.3.X.
+* Cleanup: Updated the accompanying config.dtd with the "ping" XML tag.
+* Cleanup: Disable GNU readline history when running in batch mode.
+
+Change List For v0.7.3 (Language: Python / Bloat Factor: 3642 lines / Status: Skipped)
+--------------------------------------------------------------------------------------
+
+Change List For v0.7.4 (Language: Python / Bloat Factor: 3773 lines / Status: Shipped)
+--------------------------------------------------------------------------------------
+* Ability to specify per-servergroup SSH version for use with both
+  "copy" and "run" commands.  If no version is specified, no extra flags are added.
+* Cleanup: Moved CTRL-C state info into GlobalConfig.py.
+  This allows us to quickly dump out of batch mode when one hits CTRL-C.
+* Cleanup: Added code to batch mode to close STDIN, should help with backgrounding.
+* Cleanup: Made the batch mode header and footer output more concise.
+
+Change List For v0.7.5 (Language: Python / Bloat Factor: 3963 lines / Status: Shipped)
+--------------------------------------------------------------------------------------
+* Cleanup: Changed exception handling for socket timeout to avoid stack trace dump.
+* Cleanup: Changed readline code to filename-only tab completion.
+* Cleanup: Disabled "copy" command local filesystem check so regular expressions can be used.
+* Cleanup: Added ping checks to ListMode.  All servers now returned are guaranteed up.
+* Cleanup: Converted logging from ever-so-slow syslog to the new logging module.
+  All parameters such as filename, level, date format, and log format are now configurable.
+* Ability to set and show a global delay for sleep()ing between remote commands.
+  Basically this allows one to "slow things down" if desired.
+* Ability to have two permutations of list mode.
+  The first returns only hostnames, the second returns username@hostname pairs.
+
+Change List For v0.8.0 (Language: Python / Bloat Factor: 3944 lines / Status: Shipped)
+--------------------------------------------------------------------------------------
+* Ability to ignore username information in config.xml via --nouser command-line flag.
+* Ability to skip the are-you-sure questions via the "now" keyword.
+* Ability to use logging module's configuration file for ultra-flexible logging setup.
+  As a result of this change, the --quiet flag has been replaced by the --verbose flag.
+
+Change List For v0.8.5 (Language: Python / Bloat Factor: 3983 lines / Status: Shipped)
+--------------------------------------------------------------------------------------
+* Cleanup: Changed logging.conf to utilize in-memory buffering for high-volume logging.
+* Cleanup: Reordered the global config object, attempted to organize variables better.
+* Transfer of all copyright notices from personal to Orbitz corporate.
+* Ability to use regular expressions in the "run" command.
+
+Change List For v0.9.0 (Codename: Final Run / Bloat Factor: 4327 lines / Status: Shipped)
+-----------------------------------------------------------------------------------------
+* Cleanup: Added an autoconf script such that no matter where the package is installed
+  or where Python is, we'll run with it.
+* Cleanup: Replaced all highly unreadable "&" "|" characters with keyword equivalents.
+* Cleanup: Replaced all less readable "foo == FALSE" clauses with "not foo" equivalents.
+* Cleanup: Added logic to pre-check config.xml for well-formedness before actual parsing.
+* SourceForge bug #1118162 fixed.
+* Ability to load all environments at startup, then switch environments at runtime via "set environment".
+* Ability to use regular expressions in the "copy" command.
+* Cleanup: Various console mode output tweaks.
+
+Change List For v0.9.1 (Codename: One More Time / Bloat Factor: 4457 lines / Status: Shipped)
+---------------------------------------------------------------------------------------------
+* Cleanup: Removed a needless directory flag and replaced this with a more elegant solution.
+* Cleanup: Replaced GNU autoconf-based installer with Python's distutils setup.py.
+* SourceForge bug #1231297 fixed.
+
+Change List For v0.9.2 (Codename: Cleanliness / Bloat Factor: 4099 lines / Status: Shipped)
+-------------------------------------------------------------------------------------------
+* Cleanup: Updated the new setup.py scheme to be more developer-friendly.
+* Cleanup: Changed the logging of downed nodes from an "error" to a "warning".
+* Clenaup: Various small logging changes to make output more readable.
+* Preliminary threading support added, but not active by default.
+
+Change List For v0.9.3 (Codename: Cleanliness / Bloat Factor: 4102 lines / Status: Shipped)
+-------------------------------------------------------------------------------------------
+* SourceForge Bug #1250465 fixed.
+
+Change List For v1.0.0 (Codename: Porcine Catapult / Bloat Factor: 4154 lines / Status: Shipped)
+------------------------------------------------------------------------------------------------
+* Cleanup: Remove trailing whitespaces for almost all files.
+* Modified configuration XML schema to support more consistent attributes,
+  as well as dynamic attribute support.
+* Added preliminary support for attribute-based selction in "copy", "run", and "show" meta-commands.
+* Added preliminary support for attribute-based selection in list mode.
+
+Change List For v1.0.1 (Codename: Tranquility / Bloat Factor: 4567 lines / Status: Shipped)
+-------------------------------------------------------------------------------------------
+* Cleanup: Changed batch and list modes to not throw ERRORs when a non-existant server group is specified.
+           This makes it easier to maintain shared code across environments of varied size.
+* Cleanup: Changed the 'set server-group' command to simply reject attribute specifications.
+           This was acting oddly previously, resulting in confusing / potentially dangerous behavoir. 
+* Added pingtcp.py script, a very handy tool for checking whether servers are alive...or not.
+* Added sniper.py script, a very handy tool for selectively killing processes in a mission critical environment.
+
+Change List For v1.1.0 (Codename: Optimator / Status: Not Started)
+------------------------------------------------------------------
+- Stable ability to use a new run command keyword: "threads".
+  This will run the given command in background processes in parallel.
+  Output will be spooled to one file per server in a standard output directory.
+- Ability to use a "set concurrency X" command to set the concurrency
+  for parallel run.  Also XML config directives for global defaults.
+
+Change List For v1.2.0 (Codename: Status / Status: Not Started)
+---------------------------------------------------------------
+? Ability to have "pluggable" transports whereby one can at least use the "copy" and "run" commands
+  via rsh, ssh, SSL, multicast, etc.  Will most likely use command-line as interface.
+
+Small Feature TODO
+------------------
+- Server groups of server groups.
+- Cleanup: Provide a larger set of example files.  Double-check doc.  Test like crazy.
+- Ability to have batch mode report back with names of servers down and how many during a given run.
+- Ability to run multiple commands using typical shell-style semicolon delimiter.
+
+Large Feature TODO
+------------------
+- Ability to use "set password", along with password echo with or without remote sudo functionality.
+- Ability to list servers who run a particular service.  Config file tags, etc.
+- Installer: Using python's distuitls package, create a sane installer.
+- Multiple remote server file to local file copy.  This would have to somehow
+  rename the files as it copies them down, perhaps based on hostname prefix.
+  (i.e. scp awd@www01,www02,www03:/tmp/blah .)
+- Single remote server file to single remote server file copy.
+  (i.e. scp awd@www01:/tmp/blah awd@www02:/some/other/path/)
+- Single remote server file to multiple remote servers file copy.
+  (i.e. scp awd@www01:/tmp/blah awd@www01,www02,www03:/some/other/path/)
+- Testing: Completion of a comprehensive batch file test suite.
+
+Other Ideas
+-----------
+- A server mode in which the distribulator will check an incoming command
+  queue(a file or two?) then run those on what it considers to be its
+  siblings.  This would allow commands and files to be routed to
+  X number of servers in a speedy fashion.
