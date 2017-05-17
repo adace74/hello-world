@@ -10,20 +10,15 @@
 -->
 
 # Console
+## Description
 An attempt to create a lightweight Java library for receiving and processing console input.
 
-# Console
-============
 
-An attempt to create software that automatically analyzes various U.S. Stocks.
-
-Websites
---------
+## Websites
 Website:                    https://github.com/colonelforbin74/console
 JavaDoc Documentation:      N/A
 
-# Email Mailing Lists
--------------------
+## Group Discussion (Google Groups?)
 Announcement Email List Subscription:
         N/A
 User Discussion / Support List Subscription:
@@ -31,14 +26,14 @@ User Discussion / Support List Subscription:
 User Discussion / Support Main List:
         N/A
 
-# What Is It?
------------
+## What Is It?
+Fill me in later.
 
-# What Will It Do?
-----------------
+## What Will It Do?
+Fill me in later.
 
-# How Do I install It?
---------------------
+## How Do I install It?
+Fill me in later.
 
-# Who Is Working On It?
----------------------
+## Who Is Working On It?
+Fill me in later.
