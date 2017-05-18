@@ -1,17 +1,21 @@
 <!--
 
-    Copyright (c) 2017, Adam W. Dace
-
-    FIXME: This software is distributable under the BSD license. See the terms of the
-    BSD license in the documentation provided with this software.
-
-    http://www.opensource.org/licenses/bsd-license.php
+######################################################################
+#
+# File: README.md
+#
+# Copyright (c) 2017, Adam W. Dace
+#
+# https://opensource.org/licenses/GPL-3.0
+#
+######################################################################
 
 -->
 
 # Console
 ## Description
-An attempt to create a lightweight Java library for receiving and processing console input.
+An attempt to create a lightweight Java library for receiving and processing
+console input.
 
 
 ## Websites
@@ -27,13 +31,22 @@ User Discussion / Support List Subscription: N/A
 User Discussion / Support Main List: N/A
 
 ## What Is It?
-Fill me in later.
+After looking around the Internet a bit, I couldn't quite find a Java library
+that suits my needs.  This is an attempt to build a somewhat lightweight,
+console-oriented library.
 
 ## What Will It Do?
-Fill me in later.
+Right now, I'm just getting started in terms of development.
+
+Features will include:
+* 100% Pure Java
+* Suitable for use if one wanted to write a MySQL or Oracle SQL shell.
+* Support for command history, arrow-key retrieve, etc.
+* Support for control keys.
+* That's about it.
 
 ## How Do I install It?
-Fill me in later.
+Installation instructions will be forthcoming.
 
 ## Who Is Working On It?
-Fill me in later.
+Just me at the moment.
