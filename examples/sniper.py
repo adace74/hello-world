@@ -18,6 +18,7 @@ __version__ = '$Revision: 1.1 $'[11:-2]
 
 # Standard modules
 import commands
+import exceptions
 import getopt
 import sys
 
@@ -117,9 +118,9 @@ Sniper.  Processes check in.  They don't check out.
         if len(args) > 0:
             _SearchPattern = args[0]
         else:
-            raise "CommandLineError"
+            raise RuntimeError
 
-    except "CommandLineError":
+    except RuntimeError:
         print(version)
         print("ERROR: Invalid argument or flag found.  Please check your syntax.")
         print("ERROR: Please run again with the --help flag for more information.")
