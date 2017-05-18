@@ -42,7 +42,7 @@
         <!-- Put everything in ${build} into the console.jar file -->
         <jar jarfile="${dist}/lib/console.jar" basedir="${build}">
             <manifest>
-                <attribute name="Main-Class" value="com.github.console.Main"/>
+                <attribute name="Main-Class" value="com.github.console.HelloWorld"/>
             </manifest>
         </jar>
     </target>
