@@ -11,7 +11,7 @@
 
 -->
 
-# Console
+# Console Reader
 ## Description
 An attempt to create a lightweight Java library for receiving and processing
 console input.

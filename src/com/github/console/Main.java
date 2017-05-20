@@ -11,7 +11,7 @@
 
 */
 
-package com.github.console;
+package com.github.consolereader;
 
 import java.lang.*;
 import com.github.console.*;

@@ -13,7 +13,7 @@
 
 -->
 
-<project name="console" default="dist" basedir=".">
+<project name="consolereader" default="dist" basedir=".">
     <description>
         Main buildfile for the project.
     </description>
@@ -39,9 +39,9 @@
         <mkdir dir="${dist}/lib"/>
 
         <!-- Put everything in ${build} into the console.jar file -->
-        <jar jarfile="${dist}/lib/console.jar" basedir="${build}">
+        <jar jarfile="${dist}/lib/console-reader.jar" basedir="${build}">
             <manifest>
-                <attribute name="Main-Class" value="com.github.console.Main"/>
+                <attribute name="Main-Class" value="com.github.consolereader.Main"/>
             </manifest>
         </jar>
     </target>
@@ -54,6 +54,6 @@
     </target>
 
     <target name="run" description="startup application" >
-        <java jar="lib/console.jar" fork="true"/>
+        <java jar="lib/console-reader.jar" fork="true"/>
     </target>
 </project>

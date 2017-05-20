@@ -11,14 +11,14 @@
 
 -->
 
-# Console
+# Console Reader
 ## Description
 An attempt to create a lightweight Java library for receiving and processing
 console input.
 
 
 ## Websites
-Website:                    https://github.com/colonelforbin74/console
+Website:                    https://github.com/colonelforbin74/console-reader
 
 JavaDoc Documentation:      N/A
 
