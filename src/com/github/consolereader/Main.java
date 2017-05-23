@@ -14,7 +14,7 @@
 package com.github.consolereader;
 
 import java.lang.*;
-import com.github.console.*;
+import com.github.consolereader.*;
 
 class Main
 {
