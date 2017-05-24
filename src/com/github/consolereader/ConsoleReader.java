@@ -14,7 +14,7 @@
 package com.github.consolereader;
 
 import java.lang.*;
-import java.io.*;
+import java.io.Console;
 
 class ConsoleReader
 {
@@ -31,19 +31,18 @@ class ConsoleReader
     {
         String myInput = "";
 
-        System.out.println("Hello World!");
-        System.out.println("INFO: Various information.");
+        System.out.println("INFO:  Various information.");
 
-        myInput = this.readLine("DCL");
+        myInput = this.readLine("DCL> ");
 
-        System.out.println("INFO: Recevied input: " + myInput);
+        System.out.println("INFO:  Recevied input: " + myInput);
 
         return true;
     }
 
     public String readLine(String PassedPrompt)
     {
-        Console myConsole = null;
+        java.io.Console myConsole = null;
         String myLine = "";
 
         myConsole = System.console();

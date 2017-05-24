@@ -20,7 +20,7 @@ class Main
 {
     public static void main(String args[])
     {
-        Console myInstance;
+        ConsoleReader myInstance;
 
         System.out.println("INFO:  Starting Console v0.1...");
 
@@ -29,7 +29,7 @@ class Main
                            System.getProperty("os.name") + " v" +
                            System.getProperty("os.version"));
 
-        myInstance = new Console();
+        myInstance = new ConsoleReader();
 
         // TODO: Error checking.
         if (myInstance.load())
