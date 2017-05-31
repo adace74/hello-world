@@ -20,7 +20,7 @@ class Main
 {
     public static void main(String args[])
     {
-        ConsoleReader myInstance;
+        Greeter myInstance;
 
         System.out.println("INFO:  Starting HelloWorld v0.1...");
 
@@ -30,9 +30,9 @@ class Main
         if (myInstance.load())
         {
             if (myInstance.run())
-                exit(0);
+                System.exit(0);
             else
-                exit(1);
+                System.exit(1);
         }
     }
 }

@@ -2,7 +2,7 @@
 
 ######################################################################
 #
-# File: Console.java
+# File: Greeter.java
 #
 # Copyright (c) 2017, Adam W. Dace.  All Rights Reserved.
 # Please see the accompanying LICENSE file for license information.
@@ -11,12 +11,25 @@
 
 */
 
-package com.github.consolereader;
+package com.github.helloworld;
 
-class HelloWorld
+import java.lang.*;
+
+class Greeter
 {
-    public static void main(String args[])
+    // Load settings.
+
+    public boolean load()
     {
-        System.out.println("Hello World!");
+        return true;
+    }
+
+    // Run program.
+
+    public boolean run()
+    {
+        System.out.println("INFO:  Hello World!");
+
+        return true;
     }
 }
