@@ -1,0 +1,45 @@
+/*
+
+######################################################################
+#
+# File: build.xml
+#
+# Description: Main buildfile for the project.
+#
+# Copyright (c) 2017, Adam W. Dace.  All Rights Reserved.
+# Please see the accompanying LICENSE file for license information.
+#
+######################################################################
+
+*/
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/java']
+        }
+        resources {
+            srcDirs = ['src/resources']
+        }
+    }
+}
+
+mainClassName = 'com.github.helloworld.Main'
+
+jar {
+    baseName = 'hello-world'
+    version =  '0.1'
+}
+
+/*
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "joda-time:joda-time:2.2"
+    testCompile "junit:junit:4.12"
+}
+*/
