@@ -11,10 +11,10 @@
 
 */
 
-package com.github.consolereader;
+package com.github.helloworld;
 
 import java.lang.*;
-import com.github.consolereader.*;
+import com.github.helloworld.*;
 
 class Main
 {
@@ -22,17 +22,17 @@ class Main
     {
         ConsoleReader myInstance;
 
-        System.out.println("INFO:  Starting Console v0.1...");
+        System.out.println("INFO:  Starting HelloWorld v0.1...");
 
-        System.out.println("INFO:  Valid Java JDK v" +
-                           System.getProperty("java.version") + " on " +
-                           System.getProperty("os.name") + " v" +
-                           System.getProperty("os.version"));
-
-        myInstance = new ConsoleReader();
+        myInstance = new Greeter();
 
         // TODO: Error checking.
         if (myInstance.load())
-            myInstance.run();
+        {
+            if (myInstance.run())
+                exit(0);
+            else
+                exit(1);
+        }
     }
 }

@@ -11,14 +11,12 @@
 
 -->
 
-# Console Reader
+# Hello World
 ## Description
-An attempt to create a lightweight Java library for receiving and processing
-console input.
-
+A simple starting point for Java-based applications.
 
 ## Websites
-Website:                    https://github.com/colonelforbin74/console-reader
+Website:                    https://github.com/adace74/hello-world
 
 JavaDoc Documentation:      N/A
 
@@ -30,19 +28,12 @@ User Discussion / Support List Subscription: N/A
 User Discussion / Support Main List: N/A
 
 ## What Is It?
-After looking around the Internet a bit, I couldn't quite find a Java library
-that suits my needs.  This is an attempt to build a somewhat lightweight,
-console-oriented library.
+Don't get too excited, this is simply a starting point for a console-based
+Java application.  Included here is "Hello World" functionality, as well
+as build-related settings, scripts, etc.
 
 ## What Will It Do?
-Right now, I'm just getting started in terms of development.
-
-Features will include:
-* 100% Pure Java
-* Suitable for use if one wanted to write a MySQL or Oracle SQL shell.
-* Support for command history, arrow-key retrieve, etc.
-* Support for control keys.
-* That's about it.
+Not much.  Print "Hello World".
 
 ## How Do I install It?
 Installation instructions will be forthcoming.

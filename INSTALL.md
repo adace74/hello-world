@@ -11,7 +11,6 @@
 
 -->
 
-# Console Reader
+# Hello World
 ## Description
-An attempt to create a lightweight Java library for receiving and processing
-console input.
+A simple starting point for Java-based applications.
