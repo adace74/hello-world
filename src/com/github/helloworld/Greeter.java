@@ -15,7 +15,7 @@ package com.github.helloworld;
 
 import java.lang.*;
 
-class Greeter
+public class Greeter
 {
     // Load settings.
 
