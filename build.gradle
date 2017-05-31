@@ -19,10 +19,10 @@ apply plugin: 'application'
 sourceSets {
     main {
         java {
-            srcDirs = ['src/java']
+            srcDirs = ['src']
         }
         resources {
-            srcDirs = ['src/resources']
+            srcDirs = ['resources']
         }
     }
 }
