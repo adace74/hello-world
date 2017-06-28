@@ -16,6 +16,8 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
+mainClassName = 'com.github.helloworld.Main'
+
 sourceSets {
     main {
         java {
@@ -27,11 +29,15 @@ sourceSets {
     }
 }
 
-mainClassName = 'com.github.helloworld.Main'
-
 jar {
     baseName = 'hello-world'
     version =  '0.1'
+
+    manifest {
+        attributes(
+            'Main-Class': 'com.github.helloworld.Main'
+        )
+    }
 }
 
 /*

@@ -14,7 +14,7 @@
 """Application entry point. """
 
 # File version tag
-__version__ = '$Revision: 1.1 $'[11:-2]
+__version__ = '1.1'
 
 # Standard modules
 import commands
